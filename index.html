@@ -4,28 +4,58 @@
   <style>
     body {
       text-align: center;
-      background: url("background.jpg") no-repeat center center fixed;
+      background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("background.jpg") no-repeat center center fixed;
       background-size: cover;
       background-position: center;
       color: white;
       font-family: helvetica;
     }
-    p {
-      background-color:rgba(255,0,0,0.6);
-      font-size: 22px;
+
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
 
-    img {
-      margin: 40px 0px 0px 0px;
+    .subheading {
+      background-color:rgba(255,0,0,0.6);
+      font-size: 20px;
+      width: fit-content;
+      padding: 5px 20px;
+      margin: 5px 0px;
+    }
+
+    .subheading-paras {
+      margin: 5px 0px;
+    }
+
+    .gap-within {
+      margin-right: 20px;
+    }
+
+    .avatar-image {
+      margin: 80px 0px 40px 0px;
       border: 7px solid black;
       border-radius: 500px;
+    }
+
+    .logo-image {
+      width: 30px;
     }
 
   </style>
 </head>
 <body>
-  <img src="me.jpeg">
-  <p>Hi! I'm Raza Rauf, a Software Developer.</p>
-<!--   <input type="email" placeholder="Your email">
-  <input type="submit"> -->
+  <img class="avatar-image" src="me.jpeg">
+  <div class="container">
+      <div class="subheading">
+        <p class="subheading-paras">Hi! I'm Raza Rauf, a University of Regina Electronic Systems Engineering graduate</p>
+        <p class="subheading-paras">with 6 years of Software Development experience.</p>
+      </div>
+      <div class="subheading">
+        <a href="https://linkedin.com/in/raza-rauf" target="_blank" class="gap-within"><img class="logo-image" src="linkedin-logo.png"/></a>
+        <a href="https://github.com/razarauf" target="_blank"><img class="logo-image" src="github-logo.png"/></a>
+      </div>
+      <!-- <p class="subheading">Hi! I'm Raza Rauf, a Software Developer.</p> -->
+  </div>
 </body>
